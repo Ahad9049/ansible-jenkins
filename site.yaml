@@ -1,0 +1,10 @@
+- hosts: dbservers
+  become: yes
+  roles:
+    - mysql
+
+- hosts: webservers
+  become: yes
+  roles:
+    - docker
+    - website
