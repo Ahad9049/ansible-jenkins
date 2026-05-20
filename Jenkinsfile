@@ -26,7 +26,7 @@ pipeline {
                         echo "$ANSIBLE_VAULT_PASS" > vault_pass.txt
 
                         # Run Ansible playbook using the uploaded PEM key
-                        ansible-playbook site.yml \
+                        ansible-playbook site.yaml \
                           --private-key $SSH_KEY \
                           --vault-password-file vault_pass.txt
 
